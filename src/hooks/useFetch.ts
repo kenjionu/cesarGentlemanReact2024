@@ -17,7 +17,9 @@ interface Params<T> {
     error: Error | null;
 }
 //creamos nuestro hooks
-
+//useFetch es una key -> hace referencia a
+//-> espacio de emoria
+///-> funcion
 export const useFetch = <T>(url:string): Params<T> =>{ 
 const [data, setData] = useState<Data<T>>(null)
 const [loading, setLoading] = useState(true)
