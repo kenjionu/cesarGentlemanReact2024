@@ -1,57 +1,34 @@
-import { useState } from 'react'
 import './App.css'
-import { Button } from './components'
+import { useFetch } from './hooks'
+
+interface Data {
+  name: string;
+  lastName: string;
+  age: number;
+}
 function App() {
+  const url = ("https://api.example.com/data")
+
+  const { data, error, loading } = useFetch<Data>(url)
   /**
-   * useState es para crear un estado, son cosas que van estar ligados
-   * a un componente
    * 
-   * 
-   * 
-   * */
-  //Un componente inteligente tiene un estado
-  //Un estado es para guardar las variables componentes y estados
-  //usado del estado de React
-  const [count, setCount] = useState(0)
-  const [name, setName] = useState('Cesar')
-  /**
-   * 1.- cuando se monta un componente
-   * 2.- cambio de estado
-   * 
-   * 
+   * la magia data.age data.name data.lastName
+   * solito ya sabemos que es de tipo Data
+   * y esta tipado
    */
 
-  /**
-   * Lo que comunmente usaremos hooks gancho en react
-   */
- 
-  //batching ejecutar todo ajuntar esos cambios y lo anidara
-  //y lo ejecutara en un solo render
-  const countMore = () => {
-    setCount((count) => count + 1)
-    setCount((count) => count + 1)
-    setCount((count) => count + 1)
-    setCount((count) => count + 1)
-    setCount((count) => count + 1)
-    setCount((count) => count + 1)
-    setCount((count) => count + 1)
-    //porque esto funciona? porque ejecuta un metodo de React
-    /** esto hace esto (count) => count + 1 
-     * (0) => 0 + 1 = 1
-     * (1) => 1 + 1 = 2
-     * (2) => 2 + 1 = 3
-     * (3) => 3 + 1 = 4
-     * (4) => 4 + 1 = 5
-     * (5) => 5 + 1 = 6
-     * (6) => 6 + 1 = 7
-    */
+  if (loading) {
+    return <div>Cargando...</div>
   }
-  return (
-    <>
-        <Button label={`Count is ${count}`} parentMethod={countMore}/>
 
-    </>
+  if (error) {
+    return <div>UPS! Hay un error: {error.message}</div>
+  }
+
+  return (
+    <div>{JSON.stringify(data)}</div>
   )
 }
+
 
 export default App
