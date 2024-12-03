@@ -3,17 +3,9 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { FormValues, schema } from '../../../models';
 import InputForm from '../../atoms/CustomInput/CustomInput';
-//vamos a decir como van hacer las propiedades de un objeto
-//zod es para crear schemas
-/** porque frontend y backend les encanta los schemas?
- * porque ademas de poner estas cosas muy geniales,
- * ademas de validar, tambien nos ayudan a tipar
- * 
- */
 
 export const CustomForm = () => {
-//esto es un custom state, nos retornara cosas, devuelve métodos
-//devuelve un objeto con métodos
+
     const {control, handleSubmit, formState: {errors}} = useForm<FormValues>({
         resolver: zodResolver(schema),
         mode: "onBlur",
