@@ -1,8 +1,6 @@
-import { ReactNode, useContext } from "react";
+import { ReactNode } from "react";
 import './Button.css'
-import { GentlemanContext } from "../../../App";
-
-//COMPOSITION PATTERN
+import { useGlobalContext } from "../../../context/global.context";
 
 interface Props {
     children: ReactNode;
@@ -13,21 +11,24 @@ interface ChildrenProps {
     children: ReactNode
 }
 
-
 export const ColorRed = ({children}: ChildrenProps) => {
-    const gentlemanContext = useContext(GentlemanContext)
+    const {value} = useGlobalContext()
     return (<><div className="color-red">
-        The color inside is {gentlemanContext}
-        {children}</div></>)
-
+        {value}:{children}</div></>)
 }
 
 export const Button = ({children, parentMethod}: Props) => {
+    const {setValue} = useGlobalContext()
+
+    const handleClick = () => {
+        setValue(10) 
+        parentMethod()
+    }
     return (
         <button 
         className='custom-button'
         type="button"
-        onClick={parentMethod}>
+        onClick={handleClick}>
             {children}
         </button>
       )

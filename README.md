@@ -1,8 +1,17 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# useState es un hook que nos permite manejar el estado de un cliente
 
-Currently, two official plugins are available:
+# useEffect es un hook que nos permite manejar el ciclo de un vida de componente, esto se debería manejar desde el componente padre para consumir algun API
+
+# Context API es lo que se llama un canal de comunicación entre componentes que se maneja desde el componente padre es algo que engloba para el uso de toda la APLICACION QUE SE QUIERE COMPARTIR
+
+# ¿Cuando se usa context API?
+#Realmente cuando son componentes HERMANOS 
+
+# Custom Hooks nos sirve para manejar la lógica de un componente de forma independiente, entre comunicación de componentes puede ser un padre o un hijo.
+
+# Composition Pattern es un patrón de diseño que nos permite componer componentes de manera independiente y reutilizable.
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
