@@ -2,7 +2,7 @@
 
 # useState es un hook que nos permite manejar el estado de un cliente
 
-# useEffect es un hook que nos permite manejar el ciclo de un vida de componente, esto se debería manejar desde el componente padre para consumir algun API
+# useEffect es un hook que nos permite manejar el ciclo de un vida de componente, esto se debería manejar desde el componente padre para consumir algun API ES PARA USAR EXTERNAMENTE DE TU COMPONENTE
 
 # Context API es lo que se llama un canal de comunicación entre componentes que se maneja desde el componente padre es algo que engloba para el uso de toda la APLICACION QUE SE QUIERE COMPARTIR
 
@@ -12,6 +12,13 @@
 # Custom Hooks nos sirve para manejar la lógica de un componente de forma independiente, entre comunicación de componentes puede ser un padre o un hijo.
 
 # Composition Pattern es un patrón de diseño que nos permite componer componentes de manera independiente y reutilizable.
+
+# UseRef es un hook que nos permite manejar el DOM de manera directa
+
+# UseMemo es un hook que nos permite memorizar un valor, esto es útil para evitar recalcular el mismo valor en componentes que se repiten
+
+# UseCallback es un hook que nos permite memorizar una función
+
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
