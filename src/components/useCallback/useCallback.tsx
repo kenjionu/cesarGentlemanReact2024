@@ -1,7 +1,7 @@
 // objetivo: 1 useCallback es un hook para memorizar una instancia de una funcion
 // hace que un hijo no renderice si no hay cambios en las props
 
-import { useCallback, useState } from "react";
+import { memo, useCallback, useState } from "react";
 
 // Ejemplo:
 // Supongamos que tenemos un numero de telefono al que llamas con frecuencia
@@ -19,17 +19,19 @@ interface ContactProps {
     onCall: (phone: string) => void;
 }
 
-const ContactCard = ({contact, onCall}: ContactProps) => {
+//Memo es un hook que memoriza una instancia de un componente 
+
+const ContactCard = memo(({contact, onCall}: ContactProps) => {
     console.log("Renderizando ContactCard")
 
     return (
         <div>
             <h3>{contact.name}</h3>
             <p>telefono {contact.phone}</p>
-            <button onClick={() => onCall(contact.phone)}>Llamar</button>
+            <button onClick={() => onCall(contact.name)}>Llamar</button>
         </div>
     )
-}
+})
 
 export const PhoneBook = () => {
     const [contacts, setContacts] = useState<Contact[]>([{
@@ -49,7 +51,7 @@ export const PhoneBook = () => {
 ]);
 
 const [log, setLog] = useState<string>('');
-const makeCall = useCallback((phone: string) => setLog(`llamando al ${phone}`), [])
+const makeCall = useCallback((name: string) => setLog(`llamando al ${name}`), [])
 const addContact = () => {
     const newContact = {
         id: contacts.length + 1,
