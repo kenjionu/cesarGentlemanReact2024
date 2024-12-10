@@ -6,3 +6,4 @@ export * from './useRef/BookReader.tsx';
 export * from './useRef/FocusInput.tsx';
 export * from './useMemo/ShoppingCart.tsx'
 export * from './useCallback/useCallback.tsx'
+export * from './organisms/Modal/Modal.tsx'

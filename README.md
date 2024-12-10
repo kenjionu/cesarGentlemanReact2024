@@ -19,6 +19,16 @@
 
 # UseCallback es un hook que nos permite memorizar una función
 
+# Portals es un portal a otra dimension, lo que va a pasar vamos a tener la capacidad de renderizar lo que querramos en cualquier lugar de la aplicación
+
+# Los Portals en React son una característica que te permite renderizar elementos hijos en un nodo del DOM que existe fuera de la jerarquía del componente padre.
+Aquí te explico los puntos principales:
+Uso común:
+Modales
+Tooltips
+Menús flotantes
+Widgets que necesitan estar fuera del flujo normal del DOM
+
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
