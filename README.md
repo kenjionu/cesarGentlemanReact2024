@@ -29,6 +29,11 @@ Tooltips
 Menús flotantes
 Widgets que necesitan estar fuera del flujo normal del DOM
 
+# Error Boundaries problemas de codificar error muy tonto undefined, hay muy poca gente no sabe error boundaries. Van a pensar que es hasta arcaico, puede haber que tenga drama con fetch, los errorboundaries no reconocen Fetch, hay cosas que se pueden hacer para arreglar esta situación
+
+
+
+
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
